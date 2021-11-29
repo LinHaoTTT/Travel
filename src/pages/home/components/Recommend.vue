@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList">
+      <li class="item border-bottom" v-for="item of list">
           <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -16,30 +16,10 @@
 <script>
 export default {
   name: 'HomeRecommend',
-
-  data() {
-    return{
-      recommendList:[{
-        id:'0001',
-        imgUrl:'//imgs.qunarzz.com/p/p67/1512/a2/0ebfcd965b9391f7.jpg_256x160_04d5813d.jpg',
-        title:'含往返飞机票(含税)+4晚住宿',
-        desc:'潮玩海陆空：蜈支洲岛畅玩一整天+亚龙湾热带天堂森林公园|直升机体验+帆船出海两小时激情玩海之旅（三亚连住180°海景房）'
-
-      },{
-        id:'0002',
-        imgUrl:'//imgs.qunarzz.com/p/p67/1512/a2/0ebfcd965b9391f7.jpg_256x160_04d5813d.jpg',
-        title:'含往返飞机票(含税)+4晚住宿',
-        desc:'潮玩海陆空：蜈支洲岛畅玩一整天+亚龙湾热带天堂森林公园|直升机体验+帆船出海两小时激情玩海之旅（三亚连住180°海景房）'
-
-      },{
-        id:'0003',
-        imgUrl:'//imgs.qunarzz.com/p/p67/1512/a2/0ebfcd965b9391f7.jpg_256x160_04d5813d.jpg',
-        title:'含往返飞机票(含税)+4晚住宿',
-        desc:'潮玩海陆空：蜈支洲岛畅玩一整天+亚龙湾热带天堂森林公园|直升机体验+帆船出海两小时激情玩海之旅（三亚连住180°海景房）'
-
-      }]
-    }
+  props:{
+    list:Array
   },
+
 }
 </script>
 <style lang="stylus" scoped>
