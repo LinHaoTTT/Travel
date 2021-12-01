@@ -6,15 +6,16 @@
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
-      输入城市/景点/游玩主题</div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont arrow-icon">&#xeb6d;</span>
+      输入城市/景点/游玩主题
     </div>
-
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}北京
+        <span class="iconfont arrow-icon">&#xeb6d;</span>
+      </div>
+    </router-link>
   </div>
 </template>
-
 <script>
   export default{
     name:'HomeHeader',
@@ -27,7 +28,7 @@
   @import '~styles/varibles.styl'
   .header
     display:flex
-    line-height: .86rem
+    line-height: $headerHeight
     background:$bgColor
     color:#fff
 
@@ -52,6 +53,7 @@
       width: 1.24rem
       float:right
       text-align:center
+      color:#fff
       .arrow-icon
         margin-left:-.04rem
         font-size: .2rem
