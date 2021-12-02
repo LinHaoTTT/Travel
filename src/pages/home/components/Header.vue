@@ -31,7 +31,6 @@
     line-height: $headerHeight
     background:$bgColor
     color:#fff
-
     .header-left
       width:.64rem
       float:left
@@ -48,7 +47,6 @@
       background:#fff
       border-radius:.1rem
       color:#ccc
-
     .header-right
       width: 1.24rem
       float:right
@@ -57,5 +55,4 @@
       .arrow-icon
         margin-left:-.04rem
         font-size: .2rem
-
 </style>
