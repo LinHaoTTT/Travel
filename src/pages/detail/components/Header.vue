@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     handleScroll () {
+      // console.log('scrool');
       const top = document.documentElement.scrollTop
       if (top > 60 ) {
         let opacity = top / 140
@@ -45,8 +46,12 @@ export default {
       }
     }
   },
-  activated() {
+  activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  //解绑全局事件，不解绑回影响多个页面造成bug
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
 
 }
