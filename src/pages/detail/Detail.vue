@@ -17,6 +17,9 @@
   import DetailList from './components/List.vue'
   import axios from 'axios'
 export default {
+  //name作用:1、使用递归组件时需要name名字。
+  //2、取消某个页面缓存时需要用到。如exclude="Detail"
+  //3、使用vue插件时可以显示每个组件的名字
   name:'Detail',
   components: {
     DetailBanner,
