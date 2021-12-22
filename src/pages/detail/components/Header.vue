@@ -15,8 +15,9 @@
     >
       <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe624;</div>
+        景点详情
       </router-link>
-      景点详情
+
 
     </div>
   </div>
@@ -35,7 +36,9 @@ export default {
   methods: {
     handleScroll () {
       // console.log('scrool');
-      const top = document.documentElement.scrollTop
+      //兼容性代码设计
+      const top = document.documentElement.scrollTop ||
+        document.body.scrollTop || window.pageXOffset
       if (top > 60 ) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
@@ -46,11 +49,11 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
   //解绑全局事件，不解绑回影响多个页面造成bug
-  deactivated () {
+  destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
 
