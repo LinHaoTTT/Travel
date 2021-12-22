@@ -3,7 +3,7 @@
     <detail-banner
       :sightName="sightName"
       :bannerImg="bannerImg"
-      :gallaryImgs="gallaryImgs"
+      :bannerImgs="gallaryImgs"
     ></detail-banner>
     <detail-header></detail-header>
     <div class="content">
